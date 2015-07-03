@@ -4,6 +4,6 @@
 	"license" : "MIT",
 	"require" : {
 		"php" : ">=5.3",
-		"doctrine/orm" : "v2.5.0"
+		"doctrine/orm" : "dev-master"
 	}
 }
