@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "253f4e68ed00a47b88f2fa53fcc53dbe",
+    "hash": "c426a3e7beda5b7595b55df7aca566ee",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -531,16 +531,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "dev-master",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "6b3056ff8c09509071539c6d894ef8a681465b5c"
+                "reference": "aa80c7d2c55a372f5f9f825f5c66dbda53a6e3fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/6b3056ff8c09509071539c6d894ef8a681465b5c",
-                "reference": "6b3056ff8c09509071539c6d894ef8a681465b5c",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/aa80c7d2c55a372f5f9f825f5c66dbda53a6e3fe",
+                "reference": "aa80c7d2c55a372f5f9f825f5c66dbda53a6e3fe",
                 "shasum": ""
             },
             "require": {
@@ -604,7 +604,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2015-06-18 14:30:14"
+            "time": "2015-04-02 20:40:18"
         },
         {
             "name": "symfony/console",
@@ -667,9 +667,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "doctrine/orm": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

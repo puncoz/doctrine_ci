@@ -502,7 +502,7 @@ abstract class AbstractQuery
      */
     public function setHydrationCacheProfile(QueryCacheProfile $profile = null)
     {
-        if ($profile !== null && ! $profile->getResultCacheDriver()) {
+        if ( ! $profile->getResultCacheDriver()) {
             $resultCacheDriver = $this->_em->getConfiguration()->getHydrationCacheImpl();
             $profile = $profile->setResultCacheDriver($resultCacheDriver);
         }

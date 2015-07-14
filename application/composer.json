@@ -1,9 +1,8 @@
 {
-	"description" : "Doctrine ORM in CodeIgniter",
-	"name" : "CI/CIORMApp",
-	"license" : "MIT",
+	"description" : "Doctrine with CodeIgniter",
+	"name" : "CI/Doctrine_ci",
 	"require" : {
 		"php" : ">=5.3",
-		"doctrine/orm" : "dev-master"
+		"doctrine/orm" : "*"
 	}
 }

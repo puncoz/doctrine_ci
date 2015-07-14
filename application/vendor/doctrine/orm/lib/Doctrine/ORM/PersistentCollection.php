@@ -101,13 +101,13 @@ final class PersistentCollection extends AbstractLazyCollection implements Selec
     /**
      * Creates a new persistent collection.
      *
-     * @param EntityManagerInterface $em         The EntityManager the collection will be associated with.
-     * @param ClassMetadata          $class      The class descriptor of the entity type of this collection.
-     * @param Collection             $collection The collection elements.
+     * @param EntityManagerInterface $em    The EntityManager the collection will be associated with.
+     * @param ClassMetadata          $class The class descriptor of the entity type of this collection.
+     * @param Collection             $coll  The collection elements.
      */
-    public function __construct(EntityManagerInterface $em, $class, Collection $collection)
+    public function __construct(EntityManagerInterface $em, $class, $coll)
     {
-        $this->collection  = $collection;
+        $this->collection  = $coll;
         $this->em          = $em;
         $this->typeClass   = $class;
         $this->initialized = true;
@@ -470,10 +470,6 @@ final class PersistentCollection extends AbstractLazyCollection implements Selec
         parent::set($key, $value);
 
         $this->changed();
-
-        if ($this->em) {
-            $this->em->getUnitOfWork()->cancelOrphanRemoval($value);
-        }
     }
 
     /**
@@ -484,10 +480,6 @@ final class PersistentCollection extends AbstractLazyCollection implements Selec
         $this->collection->add($value);
 
         $this->changed();
-
-        if ($this->em) {
-            $this->em->getUnitOfWork()->cancelOrphanRemoval($value);
-        }
 
         return true;
     }
